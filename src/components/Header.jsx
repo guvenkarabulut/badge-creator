@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <div>
       <div className="isolate bg-white">
-        <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+        <div className="absolute inset-x-0 top-[-10rem]  transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <svg
-            className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+            className="relative left-[calc(50%-11rem)]  h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
             viewBox="0 0 1155 678"
           >
             <path
@@ -79,7 +79,7 @@ const Header = () => {
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <Dialog.Panel
               focus="true"
-              className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
+              className="fixed inset-0 overflow-y-auto bg-white px-6 py-6 lg:hidden"
             >
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
@@ -146,7 +146,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+            <div className="absolute inset-x-0 top-[calc(100%-13rem)]  transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
               <svg
                 className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
                 viewBox="0 0 1155 678"

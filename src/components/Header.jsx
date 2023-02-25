@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
+    { name: "", href: "#" },
   ];
 
   return (
@@ -46,12 +47,8 @@ const Header = () => {
           >
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
+                <span className="sr-only">Badge Generator</span>
+                <img className="h-16 w-16" src={logo} alt="" />
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -136,12 +133,6 @@ const Header = () => {
                     className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Get started
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-semibold leading-7 text-gray-900"
-                  >
-                    Learn more <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>

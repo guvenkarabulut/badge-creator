@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 
+import allBrand from "../assets/brands.json";
+
 const Contents = () => {
   const [badge, setBadge] = useState({
-    name: "asdasd",
+    name: ".ENV",
     color: "0000000",
     style: "for-the-badge",
+    logo: "dotenv",
+    logoColor: "white",
+    labelColor: "black",
   });
-
-  console.log(badge);
 
   return (
     <>
-      <div className="mt-10 sm:mt-0">
+      <div className="mt-10 sm:mt-0 m-5">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
@@ -19,7 +22,10 @@ const Contents = () => {
                 Brands Information
               </h3>
               <p className="mt-1 text-sm text-gray-600">
-                Brands Information for the your badge and your brand.
+                To create a badge, simply select the badge style, color, and
+                label that you want to use. You can then enter the text that you
+                want to appear on the badge. Once you have entered your text,
+                you can preview the badge to see how it will look.
               </p>
             </div>
           </div>
@@ -30,11 +36,12 @@ const Contents = () => {
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6">
                       <label className=" text-sm font-medium text-gray-700">
-                        Badge Name
+                        Label Name
                       </label>
                       <input
                         type="text"
                         name="badge-name"
+                        placeholder="Badge Name"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         onChange={(e) => {
                           setBadge({ ...badge, name: e.target.value });
@@ -43,7 +50,7 @@ const Contents = () => {
                     </div>
                     <div className="col-span-1 sm:col-span-1">
                       <label className="block text-sm font-medium text-gray-700">
-                        Badge Color
+                        Label Background Color
                       </label>
                       <input
                         type="color"
@@ -63,7 +70,7 @@ const Contents = () => {
                         htmlFor="country"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        Country
+                        Style
                       </label>
                       <select
                         id="country"
@@ -79,19 +86,82 @@ const Contents = () => {
                         <option>plastic</option>
                       </select>
                     </div>
+
+                    <div className="col-span-6 sm:col-span-3">
+                      <label
+                        htmlFor="country"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Brands
+                      </label>
+                      <select
+                        id="country"
+                        name="country"
+                        autoComplete="country-name"
+                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        onChangeCapture={(e) => {
+                          setBadge({ ...badge, logo: e.target.value });
+                        }}
+                      >
+                        {allBrand.map((brand) => (
+                          <option>{brand.title}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <br />
+                    <div className="col-span-6 sm:col-span-3">
+                      <label
+                        htmlFor="country"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Logo Color
+                      </label>
+                      <input
+                        type="color"
+                        autoComplete="email"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        onChange={(e) => {
+                          setBadge({
+                            ...badge,
+                            logoColor: e.target.value.substring(1),
+                          });
+                        }}
+                      />
+                    </div>
+                    <div className="col-span-6 sm:col-span-3">
+                      <label
+                        htmlFor="country"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Badge Background Color
+                      </label>
+                      <input
+                        type="color"
+                        autoComplete="email"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        onChange={(e) => {
+                          setBadge({
+                            ...badge,
+                            labelColor: e.target.value.substring(1),
+                          });
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <div className="mt-10 sm:mt-0">
-                    <div className="md:grid md:grid-cols-3 md:gap-6">
-                      <div className="md:col-span-1">
-                        <div className="px-4 sm:px-0">
-                          <img
-                            src={`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}&logo=javascript&logoColor=white`}
-                            alt=""
-                          />
-                        </div>
+                    <div className="px-4 sm:px-0 flex">
+                      <img
+                        src={`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}&logo=${badge.logo}&logoColor=${badge.logoColor}&labelColor=${badge.labelColor}`}
+                        alt=""
+                      />
+                      <div className="ml-4">
+                        <h3 className="text-lg leading-6 font-medium text-gray-900"></h3>
                       </div>
+                      <p className="text-xs text-gray-500 mt-2">
+                        {`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}&logo=${badge.logo}&logoColor=${badge.logoColor}&labelColor=${badge.labelColor}`}
+                      </p>
                     </div>
                   </div>
                 </div>

@@ -16,7 +16,6 @@ const Home = () => {
       <br />
       <br />
       <br />
-
       <Contents />
     </div>
   );

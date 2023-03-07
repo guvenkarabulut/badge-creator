@@ -5,12 +5,6 @@ import logo from "../assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navigation = [
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-    { name: "", href: "#" },
-  ];
 
   return (
     <div>
@@ -61,17 +55,6 @@ const Header = () => {
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="hidden lg:flex lg:gap-x-12">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <Dialog.Panel
@@ -98,17 +81,7 @@ const Header = () => {
               </div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
+                  <div className="space-y-2 py-6"></div>
                 </div>
               </div>
             </Dialog.Panel>
@@ -127,14 +100,7 @@ const Header = () => {
                   badge. You can use it to create your own custom badge for your
                   project.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Get started
-                  </a>
-                </div>
+                <div className="mt-10 flex items-center justify-center gap-x-6"></div>
               </div>
             </div>
             <div className="absolute inset-x-0 top-[calc(100%-13rem)]  transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">

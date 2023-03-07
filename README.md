@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Badge Creator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+    <img src="https://img.shields.io/badge/Shields.io-0000000.svg?style=for-the-badge&logo=Shields.io&logoColor=white&labelColor=black" />
+    <img src="https://img.shields.io/badge/BadgeCreator-0000000.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAB2AAAAdgFOeyYIAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAeFJREFUOI2lkrtrk1EYxn/P+b4maToElQ4OpXVy8QLqYmlt1SEO2kGw4GWMo4M4uFbcbCP5D7yBYAUXs5SCCBahqEPsUC9QvIBKUog2sbX1y3kd0ku0bRz6buc97/M7z/twYIulfxujZ0aDsBwdLga1k6XAD5RjLlFNtIxX2hL5qGNp7OHQ4NI6gDHkyr17zpVc7VQp9Omi86mi/EIxtCflFvEzGTtWScZaq62xH9VkbKyajD9+Qe99huRDALr375Kie4hvggcGH00khB2XBMaITL9AncCAmQ3uTUw8n4KZOiD4vQME0rDBJUGX/vbZbTIw+4A0DGStpu3AjKsPqA7yPgV0NUmsC0gBeGcBQB0QBXPLIP+/1M3M11lWWQPU5j8BBpYA5pvoFwRtgI8C93kVoMkLc5hmQIfAXm6u1yRwANn7t1d7GhzUPeWBPpPGmywwBvQK5Vc6awDvbgGhM+0E3mygnhZ0AqGvcWcdYNvE6QJw17CLmG4Asw3iWRlZgwzi9qvrfVMrF2HjE4tRdBnnDuIsh7hmcGT5sz4zcROYtsXwSqPGNR72TZwvE5DGVMDICtrB2oERoNASBumnuaPfNwUA9Iyf/fK6510/sgwQB+KSMrs7Cv2Pcie+bpDN1uoP2V6q5KF1mtMAAAAASUVORK5CYII=&logoColor=white&labelColor=black" />
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+This Github repository contains the source code for a web application designed to make badge creation easier using the Shields.io infrastructure. This application is particularly useful for creating badges used in open-source projects.
 
-### `npm start`
+The application is user-friendly and customizable. Badges can be created in different colors and with different text. Additionally, the format and size of the badge can be customized.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application is a useful tool for web developers and open-source projects. Badges are visual elements used in promoting projects and social media sharing, and can easily be created using this application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Build Width 🛠️
+- ![React](https://img.shields.io/badge/React-0000000.svg?style=for-the-badge&logo=React&logoColor=white&labelColor=black)
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0000000.svg?style=for-the-badge&logo=TailwindCSS&logoColor=white&labelColor=black)
+- ![HeadlessUI](https://img.shields.io/badge/HeadlessUı-0000000.svg?style=for-the-badge&logo=HeadlessUI&logoColor=white&labelColor=black)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots
+![ss1](./images-for-readme/ss1.png)
+![ss2](./images-for-readme/ss2.png)
+![ss3](./images-for-readme/ss3.png)
+![ss4](./images-for-readme/ss4.png)
+![ss6](./images-for-readme/ss6.png)
+![ss7](./images-for-readme/ss7.png)
+  

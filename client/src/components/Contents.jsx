@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+// import { toast } from "react-toastify";
 
 import allBrand from "../assets/brands.json";
 
@@ -121,15 +122,11 @@ const Contents = () => {
                           </label>
                           <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
                             <div className="space-y-1 text-center">
-                              <svg
-                                className="mx-auto h-12 w-12 text-gray-400"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 48 48"
-                                aria-hidden="true"
-                                src={badge.logo}
-                                href={badge.logo}
-                              ></svg>
+                              <img
+                                style={{ width: "70px", height: "70px" }}
+                                alt="badge"
+                                src={`https://img.shields.io/badge/-white.svg?style=${badge.style}&logo=${badge.logo}`}
+                              />
                               <div className="flex text-sm text-gray-600">
                                 <label
                                   htmlFor="file-upload"
@@ -145,10 +142,14 @@ const Contents = () => {
                                       const reader = new FileReader();
                                       reader.readAsDataURL(e.target.files[0]);
                                       reader.onload = () => {
-                                        setBadge({
-                                          ...badge,
-                                          logo: reader.result,
-                                        });
+                                        if (reader.result.length > 8192) {
+                                          alert("File size is too big!");
+                                        } else {
+                                          setBadge({
+                                            ...badge,
+                                            logo: reader.result,
+                                          });
+                                        }
                                       };
                                     }}
                                   />

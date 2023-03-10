@@ -2,7 +2,9 @@ import React from "react";
 import Contents from "../components/Contents";
 //import Footer from "../components/Footer";
 import Header from "../components/Header";
+import TabBar from "../components/TabBar";
 //      <Footer />
+// <TabBar />
 
 const Home = () => {
   return (
@@ -19,7 +21,6 @@ const Home = () => {
       <br />
       <br />
       <Contents />
-    
     </div>
   );
 };

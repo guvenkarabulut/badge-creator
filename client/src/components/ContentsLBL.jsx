@@ -17,12 +17,12 @@ const customStyles = {
 };
 const Contents = () => {
   const [badge, setBadge] = useState({
-    name: ".ENV",
-    color: "0000000",
+    name: "Example",
+    color: "black",
     style: "for-the-badge",
-    logo: "dotenv",
+    logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADWSURBVDiNldOxSgNBFIXhz2CnogjCQhBsrCzMo+Qd7HwCC8FKbHwA7a3zABapU9oIVunSJI0a0iQWFm7CZNm5ux6YYi73/PfcgdnxpwITzDWrgzF6abHARwsznOFtfdmtadjDVQA4Ti91gCPc4imAPFcL6QpdvAfmLdUlWNe7gW+GZQ6wwg9eM+ZT9DHMAaa4CKYPqlGrOsR9ALhsAuyXEW8ygJHkkXOP+IWXIMVGnTZNkXIJTnDX4H3Eoi7BJx7wHZxrHKSm/3wmZW/B9grn5fQ22kz/Ba5eIzqwLnYwAAAAAElFTkSuQmCC",
     logoColor: "white",
-    labelColor: "black",
+    labelColor: "e6e6e6",
   });
 
   const [fileInputState, setFileInputState] = useState(false);
@@ -78,6 +78,7 @@ const Contents = () => {
                       </label>
                       <input
                         type="color"
+                        value={`#${badge.color}`}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         onChange={(e) => {
                           setBadge({
@@ -188,9 +189,18 @@ const Contents = () => {
                               </option>
                             ))}
                           </select>
-                          <p>
+                          <p className="text-xs text-gray-400 mx-4 my-4">
                             Simple icons recomended this color code :
                             {selectedBrandHex}
+                            <span
+                              className="ml-2 rounded-full w-4 h-4"
+                              style={{
+                                backgroundColor: `#${selectedBrandHex}`,
+                                color: `#${selectedBrandHex}`,
+                              }}
+                            >
+                              HEX
+                            </span>
                           </p>
                         </div>
                       )}
@@ -203,6 +213,7 @@ const Contents = () => {
                       <input
                         type="color"
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        value={`#${badge.logoColor}`}
                         onChange={(e) => {
                           setBadge({
                             ...badge,
@@ -217,6 +228,7 @@ const Contents = () => {
                       </label>
                       <input
                         type="color"
+                        value={`#${badge.labelColor}`}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         onChange={(e) => {
                           setBadge({

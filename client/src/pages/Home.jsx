@@ -3,11 +3,27 @@ import Contents from "../components/ContentsLBL";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ContentsLBLT from "../components/ContentsLBLT";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [tab, setTab] = useState("1");
   return (
     <div>
+      <Helmet>
+        <title>Badge Creator</title>
+        <meta
+          name="description"
+          content="Badge creator is a tool to create your own custom shields.io
+                  badge. We provide a simple interface to create your own custom
+                  badge. You can use it to create your own custom badge for your
+                  project."
+        />
+        <meta
+          name="keywords"
+          content="badge, badge creator, shields.io, react, tailwind, tailwindcss, badgeCreator, shields.io badge creator"
+        />
+        <meta name="author" content="guvenkarabulut" />
+      </Helmet>
       <Header />
       <br />
       <br />

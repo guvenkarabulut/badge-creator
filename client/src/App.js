@@ -1,3 +1,4 @@
+//import Deneme from "./deneme";
 import Home from "./pages/Home";
 
 function App() {

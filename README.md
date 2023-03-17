@@ -24,4 +24,3 @@ This application is a useful tool for web developers and open-source projects. B
 ![ss4](./images-for-readme/ss4.png)
 ![ss6](./images-for-readme/ss6.png)
 ![ss7](./images-for-readme/ss7.png)
-  

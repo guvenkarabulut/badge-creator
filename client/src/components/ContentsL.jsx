@@ -22,6 +22,7 @@ const ContentsL = () => {
     logoColor: "white",
     labelColor: "e6e6e6",
   });
+  const [htmlOrMd, setHtmlOrMd] = useState(1);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -128,7 +129,7 @@ const ContentsL = () => {
                               <div className="flex justify-center">
                                 <img
                                   className="self-start"
-                                  src={`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}`}
+                                  src={`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}}`}
                                   alt=""
                                 />
                               </div>
@@ -142,17 +143,34 @@ const ContentsL = () => {
                                           className="text-xs text-gray-500 text-ellipsis whitespace-pre-wrap break-all"
                                           role="presentation"
                                         >
-                                          <span role="presentation">
-                                            src=
-                                            {`https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}`}
-                                          </span>
+                                          {
+                                            {
+                                              1: `<img src="https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}}" alt="badge" />`,
+                                              2: `![badge](https://img.shields.io/badge/${badge.name}-${badge.color}.svg?style=${badge.style}})`,
+                                            }[htmlOrMd]
+                                          }
                                         </pre>
                                       </td>
                                     </tr>
                                   </tbody>
                                 </table>
                               </div>
-
+                              <div className="flex justify-center mb-2">
+                                <img
+                                  className="hover:opacity-70 mr-5"
+                                  src="https://img.shields.io/badge/HTML-black.svg?style=for-the-badge&logo=HTML5&logoColor=ffffff&labelColor=e34f26"
+                                  onClick={() => {
+                                    setHtmlOrMd(1);
+                                  }}
+                                />
+                                <img
+                                  className="hover:opacity-70"
+                                  src="https://img.shields.io/badge/MARKDOWN-black.svg?style=for-the-badge&logo=Markdown&logoColor=ffffff&labelColor=000000"
+                                  onClick={() => {
+                                    setHtmlOrMd(2);
+                                  }}
+                                />
+                              </div>
                               <div className="flex justify-center row-auto">
                                 <div className="flex justify-center">
                                   <button

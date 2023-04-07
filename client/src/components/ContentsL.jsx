@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import BadgeContext from "../context/BadgeContext";
 import LabelNameInput from "./inputs/LabelNameInput";
 import BackgroundColorInput from "./inputs/BackgroundColorInput";

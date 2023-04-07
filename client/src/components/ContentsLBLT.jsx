@@ -1,9 +1,7 @@
-import EmojiPicker from "emoji-picker-react";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Modal from "react-modal";
 // import { toast } from "react-toastify";
 
-import allBrand from "../assets/brands.json";
 import BadgeContext from "../context/BadgeContext";
 import LabelNameInput from "./inputs/LabelNameInput";
 import BackgroundColorInput from "./inputs/BackgroundColorInput";

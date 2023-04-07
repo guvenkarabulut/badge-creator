@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import BadgeContext from "../../context/BadgeContext";
+import React, { useState } from "react";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
@@ -15,8 +14,6 @@ const customStyles = {
   },
 };
 const ModalButton = (props) => {
-  const [badge] = useContext(BadgeContext);
-
   const [htmlOrMd, setHtmlOrMd] = useState(1);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
